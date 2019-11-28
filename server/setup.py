@@ -207,4 +207,4 @@ os.system("sudo cp -f //home/pi/Adeept_PiCar-B/server/set.txt //etc/set.txt")
 os.system("sudo cp -f //home/pi/Adeept_PiCar-B/server/set.txt //set.txt")
 print('restarting')
 
-os.system("sudo reboot")
+# os.system("sudo reboot")
