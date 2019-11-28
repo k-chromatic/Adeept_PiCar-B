@@ -166,7 +166,7 @@ for x in range(1,4):
 		break
 
 try:
-	os.system("cd //home/pi/adeept_picar-b/server/create_ap && sudo make install")
+	os.system("cd //home/pi/Adeept_PiCar-B/server/create_ap && sudo make install")
 except:
 	pass
 
@@ -182,11 +182,11 @@ for x in range(1,4):
 try:
 	os.system('sudo mknod("//home/pi/.config/autostart/car.desktop")')
 	with open("//home/pi/.config/autostart/car.desktop",'w') as file_to_write:
-		file_to_write.write("[Desktop Entry]\n   Name=Car\n   Comment=Car\n   Exec=sudo python3 //home/pi/adeept_picar-b/server/server.py\n   Icon=false\n   Terminal=false\n   MutipleArgs=false\n   Type=Application\n   Catagories=Application;Development;\n   StartupNotify=true")
+		file_to_write.write("[Desktop Entry]\n   Name=Car\n   Comment=Car\n   Exec=sudo python3 //home/pi/Adeept_PiCar-B/server/server.py\n   Icon=false\n   Terminal=false\n   MutipleArgs=false\n   Type=Application\n   Catagories=Application;Development;\n   StartupNotify=true")
 except:
 	pass
 '''
-os.system("sudo cp -f //home/pi/adeept_picar-b/server/set.txt /home/pi/set.txt")
+os.system("sudo cp -f //home/pi/Adeept_PiCar-B/server/set.txt /home/pi/set.txt")
 
 try:
 	os.system("sudo pip3 install pocketsphinx")
@@ -196,15 +196,15 @@ except:
 try:
 	os.system('sudo touch //home/pi/startup.sh')
 	with open("//home/pi/startup.sh",'w') as file_to_write:
-		file_to_write.write("#!/bin/sh\n#sleep 10s\nsudo python3 //home/pi/adeept_picar-b/server/server.py")
+		file_to_write.write("#!/bin/sh\n#sleep 10s\nsudo python3 //home/pi/Adeept_PiCar-B/server/server.py")
 except:
 	pass
 
 os.system('sudo chmod 777 //home/pi/startup.sh')
 
 replace_num('/etc/rc.local','fi','fi\n//home/pi/startup.sh start')
-os.system("sudo cp -f //home/pi/adeept_picar-b/server/set.txt //etc/set.txt")
-os.system("sudo cp -f //home/pi/adeept_picar-b/server/set.txt //set.txt")
+os.system("sudo cp -f //home/pi/Adeept_PiCar-B/server/set.txt //etc/set.txt")
+os.system("sudo cp -f //home/pi/Adeept_PiCar-B/server/set.txt //set.txt")
 print('restarting')
 
 os.system("sudo reboot")
