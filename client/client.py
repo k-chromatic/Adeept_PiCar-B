@@ -262,7 +262,7 @@ def loop():                       #GUI
         var_x_scan = tk.IntVar()  #Scan range value saved in a IntVar
         var_x_scan.set(2)         #Set a default scan value
 
-        logo =tk.PhotoImage(file = 'logo.png')         #Define the picture of logo,but only supports '.png' and '.gif'
+        logo =tk.PhotoImage(file = 'logo.gif')         #Define the picture of logo,but only supports '.png' and '.gif'
         l_logo=tk.Label(root,image = logo,bg=color_bg) #Set a label to show the logo picture
         l_logo.place(x=30,y=13)                        #Place the Label in a right position
 
